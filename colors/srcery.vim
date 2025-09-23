@@ -3,6 +3,9 @@
 " Description:  Colorscheme that focus ease of use and clearly defined contrasting colors with a slightly earthy tone.
 " Original Source: https://github.com/morhetz/gruvbox
 
+" NOTE: custom colors
+let pure_black = '#000000'
+
 scriptencoding utf-8
 
 set background=dark
@@ -213,7 +216,8 @@ endif
 
 if !exists('g:srcery_bg')
   "Sets the default color for both guisp and cterm backgrounds.
-  let g:srcery_bg=[g:srcery_black, 0]
+  let g:srcery_bg=[pure_black, 0]
+  "let g:srcery_bg=[g:srcery_black, 0]
 elseif (index(g:srcery_bg, 'DEFAULT') >= 0) || (index(g:srcery_bg, 'NONE') >= 0 && has('gui_running'))
   "Defaults should be set if the user specifies it, or if the background is set as 'NONE' whilst the gui is running.
   for i in [0, 1]
@@ -536,7 +540,8 @@ call s:HL('StatusLine',   s:bright_white, s:xgray2)
 
 call s:HL('StatusLineNC', s:bright_black, g:srcery_bg, s:underline)
 " The column separating vertically split windows
-call s:HL('VertSplit', s:bright_white, g:srcery_bg)
+"call s:HL('VertSplit', s:bright_white, g:srcery_bg)
+call s:HL('VertSplit', s:bright_black, g:srcery_bg)
 " Current match in wildmenu completion
 call s:HL('WildMenu', s:blue, g:srcery_bg, s:bold)
 
