@@ -542,6 +542,7 @@ call s:HL('StatusLineNC', s:bright_black, g:srcery_bg, s:underline)
 " The column separating vertically split windows
 "call s:HL('VertSplit', s:bright_white, g:srcery_bg)
 call s:HL('VertSplit', s:black, g:srcery_bg)
+call s:HL('WinSeparator', s:black, g:srcery_bg)
 " Current match in wildmenu completion
 call s:HL('WildMenu', s:blue, g:srcery_bg, s:bold)
 
