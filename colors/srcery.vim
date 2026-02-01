@@ -5,6 +5,7 @@
 
 " NOTE: custom colors
 let pure_black = '#000000'
+let soft_black = '#111111'
 
 scriptencoding utf-8
 
@@ -216,7 +217,8 @@ endif
 
 if !exists('g:srcery_bg')
   "Sets the default color for both guisp and cterm backgrounds.
-  let g:srcery_bg=[pure_black, 0]
+  "let g:srcery_bg=[pure_black, 0]
+  let g:srcery_bg=[soft_black, 0]
   "let g:srcery_bg=[g:srcery_black, 0]
 elseif (index(g:srcery_bg, 'DEFAULT') >= 0) || (index(g:srcery_bg, 'NONE') >= 0 && has('gui_running'))
   "Defaults should be set if the user specifies it, or if the background is set as 'NONE' whilst the gui is running.
